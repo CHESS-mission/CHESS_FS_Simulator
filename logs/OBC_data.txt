@@ -1,0 +1,19 @@
+Beginning of the OBC log file.
+All received and transmitted messages from this board are saved in this file.
+Message's schema is like the following:
+If it is a reception:
+	Received MSG from <Emitter board> through <protocol>, size=<data size in ko>ko.[CR]<message>[CR]
+If it is an emission:
+	Send MSG to <Receiver board> through <protocol>, size=<data size in ko>ko.[CR]<message>[CR]
+
+
+Received MSG from ADCS through CAN, size = 1ko.
+orientation:x=115.8, y=570.86, z=65.9
+magnetotorquer --> here nothing to be afraid of, everything OK
+
+Received MSG from ADCS through SPI, size = 2ko.
+order:position -precisely -fast
+order: battery->Stop channel 10
+info: get RUAG panels tension and intensity values
+info: get general battery value
+

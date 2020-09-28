@@ -1,0 +1,18 @@
+* This line is a comment
+* Please add settings lines only where it's specified
+*
+
+* Global settings
+exchange_address = 127.0.0.1 * = localhost. It can be 127.0.0.X with 1<=X<=255
+interface_port = 5550 * It must be between 200 and 65535. Ports of next boards will follow
+
+
+* Boards settings (name(alphanums+'_-.'), RX-port(num),
+*                  protocols supported(alphanums+'_-.')
+* Lines can be added with the same syntax pattern as lines above it
+OBC = CAN1 CAN2 LVDS
+ADCS = CAN1 SPI I2C UART
+*GNSS = SPI
+*EPS = CAN1
+*Payload = CAN1 CAN2 LVDS
+*X-Band = CAN1 CAN2 LVDS

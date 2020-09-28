@@ -1,0 +1,15 @@
+Beginning of the interface log file.
+All transmitted messages are gathered by the interface. Message's schema is like the following:
+<Emitter board> to <Receiver board> through <protocol>, size=<data size in ko>ko.[CR]<message>[CR]
+
+
+ADCS to OBC through CAN, size = 1ko.
+orientation:x=115.8, y=570.86, z=65.9
+magnetotorquer --> here nothing to be afraid of, everything OK
+
+ADCS to OBC through SPI, size = 2ko.
+order:position -precisely -fast
+order: battery->Stop channel 10
+info: get RUAG panels tension and intensity values
+info: get general battery value
+

@@ -1,0 +1,28 @@
+* order's schema is like the following:
+* <receiver board> <protocol> <theoretical data size in ko (integer)>
+*  <recurrence of msg in second (integer, 0 = once)>:[CR]<message>[CR]end_msg[CR]
+* don't use '/' or '*' in the message, a '|' is interpreted as a return
+
+* Read the settings.txt file in order to know what are the protocol
+* supported by the boards
+
+
+start-ADCS
+OBC CAN 1 15:
+orientation:x=115.8, y=570.86, z=65.9
+magnetotorquer --> here nothing to be afraid of, everything OK
+end_msg
+OBC SPI 2 0:
+order:position -precisely -fast
+order: battery->Stop channel 10
+info: get RUAG panels tension and intensity values
+info: get general battery value
+end_msg
+
+
+start-OBC
+ADCS CAN1 1 0:
+order:activate energy channel 8
+end_msg
+
+
